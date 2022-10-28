@@ -19,29 +19,29 @@ let wavesurfer = WaveSurfer.create({
 playBtn.addEventListener('click', () =>{
     wavesurfer.playPause();
     if(playBtn.src.includes('play.png')){
-        playBtn.src = '/assets/pause.png';
+        playBtn.src = './assets/pause.png';
     }
     else{
-        playBtn.src = '/assets/play.png';
+        playBtn.src = './assets/play.png';
     }
 });
 stopBtn.addEventListener('click', () =>{
     wavesurfer.stop();
-    playBtn.src = '/assets/play.png'
+    playBtn.src = './assets/play.png'
 });
 volumeBtn.addEventListener('click', () =>{
     wavesurfer.toggleMute();
     if(volumeBtn.src.includes('volume.png')){
-        volumeBtn.src = '/assets/mute.png';
+        volumeBtn.src = './assets/mute.png';
     }
     else{
-        volumeBtn.src = '/assets/volume.png';
+        volumeBtn.src = './assets/volume.png';
     }
 });
 
 wavesurfer.on('finish', function () {
-    playBtn.src = '/assets/play.png';
+    playBtn.src = './assets/play.png';
     wavesurfer.stop()
 });
 
-wavesurfer.load('/audio/URL Melt - Unicorn Heads.mp3');
+wavesurfer.load('./URL Melt - Unicorn Heads.mp3');
